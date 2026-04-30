@@ -23,7 +23,7 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
   - [🛠️ CRS 2.0 — Tech Stack](#️-crs-20--tech-stack)
     - [🎨 Frontend Tools](#-frontend-tools)
     - [⚙️ Backend Tools](#️-backend-tools)
-    - [Database](#database)
+    - [🗄️ Database](#️-database)
     - [Other Tools](#other-tools)
   - [Hosting](#hosting)
   - [Mockups](#mockups)
@@ -76,9 +76,17 @@ The backend is powered by **NestJS** on top of **Node.js**, providing a modular,
 
 ---
  
-### Database
+### 🗄️ Database
  
-<!-- Database here -->
+CRS 2.0 uses **PostgreSQL** as its primary relational database — chosen for its ACID compliance, relational integrity, and powerful features like triggers and full-text search. **Prisma ORM** sits on top to provide type-safe queries and clean schema migrations. **PgBouncer** is added to handle connection pooling under high concurrency.
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="24"/> | **PostgreSQL** | Primary Database | ACID-compliant transactions prevent double enrollments and lost records. Supports complex relationships: students, courses, prerequisites, schedules, and grades. |
+| <img src="https://cdn.simpleicons.org/prisma/2D3748" width="24"/> | **Prisma ORM** | Database Access Layer | Auto-generates TypeScript types from the DB schema for type-safe queries. Handles migrations with rollback support and includes a visual DB explorer (Prisma Studio). |
+| <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="24"/> | **PgBouncer** | Connection Pooler | Acts as a proxy between NestJS and PostgreSQL — prevents connection exhaustion when hundreds of students submit requests simultaneously. |
+
+---
  
 ### Other Tools
  
