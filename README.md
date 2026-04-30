@@ -13,15 +13,24 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
 
 ## Table of Contents
  
-- [System Summary](#system-summary)
-- [Tech Stack](#tech-stack)
-    - [Frontend Tools](#frontend-tools)
+- [The Long Awaited CRS 2.0 is Here!](#the-long-awaited-crs-20-is-here)
+  - [Overview](#overview)
+    - [Team Members](#team-members)
+  - [Table of Contents](#table-of-contents)
+  - [System Summary](#system-summary)
+    - [New Features](#new-features)
+    - [Fixes](#fixes)
+  - [🛠️ CRS 2.0 — Tech Stack](#️-crs-20--tech-stack)
+    - [🎨 Frontend Tools](#-frontend-tools)
     - [Backend Tools](#backend-tools)
     - [Database](#database)
     - [Other Tools](#other-tools)
-- [Hosting](#hosting)
-- [Mockups](#mockups)
-- [System Architecture](#system-architecture)
+  - [Hosting](#hosting)
+  - [Mockups](#mockups)
+  - [System Architecture](#system-architecture)
+    - [Direct Payment Process](#direct-payment-process)
+    - [CRS 2.0 Simple Sitemap](#crs-20-simple-sitemap)
+    - [Course Enlistment Flowchart](#course-enlistment-flowchart)
 ---
 ## System Summary
 
@@ -35,11 +44,20 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
 - Bigger text and visual weight to improve visual hierarchy, making key information easier to scan
 
 
-## Tech Stack
- 
-### Frontend Tools
- 
-<!-- Front end Tools here -->
+## 🛠️ CRS 2.0 — Tech Stack
+
+### 🎨 Frontend Tools
+
+The frontend is primary built with **Next.js**, a modern React-based framework that supports Server-Side Rendering (SSR) and Static Site Generation (SSG) — ensuring fast, reliable page loads even during peak enrollment periods. The stack is designed for type safety, consistent UI, and real-time data updates, making it ideal for a high-traffic university system.
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/nextdotjs/000000" width="24"/> | **Next.js** | Core Framework | Provides SSR and SSG for fast page loads during enrollment peaks. File-based routing maps cleanly to pages. |
+| <img src="https://cdn.simpleicons.org/typescript/3178C6" width="24"/> | **TypeScript** | Language | Enforces strict type checking across the codebase — prevents passing wrong data types for student records, course codes, and IDs. |
+| <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="24"/> | **Tailwind CSS** | Styling | Utility-first CSS that ensures UI consistency across all pages — components built quickly and uniformly without custom CSS. |
+| <img src="https://cdn.simpleicons.org/reactquery/FF4154" width="24"/> | **React Query** | Data Fetching & Caching | Manages server state with intelligent caching and background refetching — students always see up-to-date enrollment data without full page reloads. |
+| <img src="https://cdn.simpleicons.org/zod/3E67B1" width="24"/> | **Zod** | Form Validation | Validates form inputs on the frontend before they reach the backend — ensures malformed enrollment or document data is rejected early. |
+| <img src="https://authjs.dev/img/logo-sm.png" width="24"/> | **Auth.js** | Authentication | Handles authentication, session management, and OAuth 2.0 integration with UP SSO providers. Supports secure role-aware access flows for students, faculty, and administrators. |
  
 ### Backend Tools
  
