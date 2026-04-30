@@ -22,7 +22,7 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
     - [Fixes](#fixes)
   - [🛠️ CRS 2.0 — Tech Stack](#️-crs-20--tech-stack)
     - [🎨 Frontend Tools](#-frontend-tools)
-    - [Backend Tools](#backend-tools)
+    - [⚙️ Backend Tools](#️-backend-tools)
     - [Database](#database)
     - [Other Tools](#other-tools)
   - [Hosting](#hosting)
@@ -58,10 +58,23 @@ The frontend is primary built with **Next.js**, a modern React-based framework t
 | <img src="https://cdn.simpleicons.org/reactquery/FF4154" width="24"/> | **React Query** | Data Fetching & Caching | Manages server state with intelligent caching and background refetching — students always see up-to-date enrollment data without full page reloads. |
 | <img src="https://cdn.simpleicons.org/zod/3E67B1" width="24"/> | **Zod** | Form Validation | Validates form inputs on the frontend before they reach the backend — ensures malformed enrollment or document data is rejected early. |
 | <img src="https://authjs.dev/img/logo-sm.png" width="24"/> | **Auth.js** | Authentication | Handles authentication, session management, and OAuth 2.0 integration with UP SSO providers. Supports secure role-aware access flows for students, faculty, and administrators. |
+
+---
  
-### Backend Tools
+### ⚙️ Backend Tools
  
-<!-- Backend tools here -->
+The backend is powered by **NestJS** on top of **Node.js**, providing a modular, scalable, and TypeScript-first architecture. It exposes a hybrid API layer — combining **GraphQL** for complex data queries and **REST** for action-based operations — to serve the diverse needs of students, faculty, and administrators efficiently.
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/nodedotjs/339933" width="24"/> | **Node.js** | Runtime Environment | Non-blocking I/O handles hundreds of simultaneous enrollment requests without stalling — critical during peak enrollment windows. |
+| <img src="https://cdn.simpleicons.org/nestjs/E0234E" width="24"/> | **NestJS** | Backend Framework | Enforces modular architecture (e.g., `EnrollmentModule`, `GradesModule`, `AuthModule`). More structured and scalable than raw Express.js as the system grows. |
+| <img src="https://cdn.simpleicons.org/graphql/E10098" width="24"/> | **GraphQL** *(Apollo Server)* | Complex Data Queries | Lets the student dashboard fetch name, GPA, schedule, and units in a single request — reducing unnecessary API calls and over-fetching. |
+| <img src="https://cdn.simpleicons.org/swagger/85EA2D" width="24"/> | **REST API** *(OpenAPI/Swagger)* | Action-Based Operations | Used for file uploads, payment webhooks, grade submissions, and admission forms — clear HTTP methods for transactional operations. |
+| <img src="https://cdn.simpleicons.org/passport/34E27A" width="24"/> | **Passport.js** | API Authentication | Protects backend API endpoints. Handles JWT and session-based auth, integrates with UP SSO on the server side. |
+| <img src="https://cdn.simpleicons.org/zod/3E67B1" width="24"/> | **Zod** | Backend Validation | Validates all incoming API requests and GraphQL inputs on the server side — never trusts data from the client. |
+
+---
  
 ### Database
  
