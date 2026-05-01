@@ -6,6 +6,11 @@
 
   # UPV CRS 2.0
 
+  ![Status](https://img.shields.io/badge/status-proposal-blue)
+  ![Confidentiality](https://img.shields.io/badge/confidentiality-proprietary-red)
+  ![Phase](https://img.shields.io/badge/phase-planning-orange)
+  ![Team](https://img.shields.io/badge/team-4%20members-brightgreen)
+  
   UPV CRS 2.0 is a redesigned version of the University of the Philippines Visayas Course Registration System (CRS). The update aims to improve usability, performance, and reliability by introducing a more modern web-based platform that supports faster transactions and improved user experience.
   
 </div>
@@ -50,7 +55,7 @@
 
 ### Problem Statement
 
-The current UPV CRSIS (established ~2010) suffers from critical infrastructure issues, poor user experience, and inability to handle peak enrollment traffic, resulting in system crashes during crucial registration periods that affect thousands of students.
+The current UPV CRSIS suffers from critical infrastructure issues, poor user experience, and inability to handle peak enrollment traffic, resulting in system crashes during crucial registration periods that affect thousands of students.
  
 ### Solution 
 
