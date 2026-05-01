@@ -25,6 +25,9 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
     - [⚙️ Backend Tools](#️-backend-tools)
     - [🗄️ Database](#️-database)
     - [⚡ Background Jobs \& Caching](#-background-jobs--caching)
+    - [🧪 Testing](#-testing)
+    - [📊 Monitoring \& Logging](#-monitoring--logging)
+    - [🚀 Deployment \& Infrastructure](#-deployment--infrastructure)
   - [Hosting](#hosting)
   - [Mockups](#mockups)
   - [System Architecture](#system-architecture)
@@ -99,6 +102,38 @@ Enrollment requests are processed asynchronously using **Bull** queues backed by
 | <img src="https://bullmq.io/images/bullmq-logo.png" width="48"/> | **BullMQ** | Job Queue Library | Handles asynchronous tasks such as enrollment processing, grade calculations, email notifications, and TOR generation. Provides retry mechanisms, concurrency control, and dead-letter queue support for failed jobs. |
 
 ---
+
+### 🧪 Testing
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/jest/C21325" width="24"/> | **Jest** | Unit & Integration Testing | Tests NestJS services, GraphQL resolvers, and validation logic. Targets 70%+ code coverage for critical paths like enrollment and authentication. |
+
+
+---
+
+### 📊 Monitoring & Logging
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/elasticsearch/005571" width="24"/> | **ELK Stack** *(Elasticsearch, Logstash, Kibana)* | Centralized Logging | Aggregates and indexes logs from NestJS and Next.js. Allows searching logs by student ID, error type, or timestamp. |
+| <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="24"/> | **Prometheus** | Metrics Collection | Tracks enrollment queue depth, DB query latency, API response times, and Redis memory usage in real time. |
+| <img src="https://cdn.simpleicons.org/grafana/F46800" width="24"/> | **Grafana** | Metrics Dashboards & Alerts | Visualizes Prometheus metrics with dashboards. Sends alerts when queue depth spikes or DB queries exceed thresholds. |
+| <img src="https://cdn.simpleicons.org/sentry/362D59" width="24"/> | **Sentry** | Error Tracking | Automatically captures and groups unhandled exceptions. Alerts the team when error rates spike — e.g., 500 errors in the enrollment endpoint. |
+
+---
+
+### 🚀 Deployment & Infrastructure
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/docker/2496ED" width="24"/> | **Docker** | Containerization | Packages the app and all dependencies into containers — ensures consistent environments across development and production. |
+| <img src="https://cdn.simpleicons.org/docker/2496ED" width="24"/> | **Docker Compose** | Local Dev Orchestration | Spins up PostgreSQL, Redis (cache + queue), NestJS, and Next.js locally with a single command for easy developer setup. |
+| <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="24"/> | **Kubernetes** | Production Orchestration | Manages auto-scaling, load balancing, and container health in production — handles enrollment traffic spikes automatically. |
+
+---
+
+
 
 ## Hosting
 <!-- Hostings -->
