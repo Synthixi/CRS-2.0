@@ -237,11 +237,12 @@ Implementation will follow a phased rollout:
 
 ```mermaid
 flowchart LR
-    P1["**Phase 1:** Containerize services Deploy alongside existing system"]
-    P2["**Phase 2:** Expand infrastructure Gradually migrate data and users"]
-    P3["**Phase 3:** Complete transition Decommission legacy system"]
+    P1[Phase 1: Containerize services. Deploy alongside existing system]
+    P2[Phase 2: Expand infrastructure. Gradually migrate data and users]
+    P3[Phase 3: Complete transition. Decommission legacy system]
 
-    P1 --> P2 --> P3
+    P1 --> P2
+    P2 --> P3
 ```
 
 
