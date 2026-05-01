@@ -24,7 +24,7 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
     - [🎨 Frontend Tools](#-frontend-tools)
     - [⚙️ Backend Tools](#️-backend-tools)
     - [🗄️ Database](#️-database)
-    - [Other Tools](#other-tools)
+    - [⚡ Background Jobs \& Caching](#-background-jobs--caching)
   - [Hosting](#hosting)
   - [Mockups](#mockups)
   - [System Architecture](#system-architecture)
@@ -88,9 +88,17 @@ CRS 2.0 uses **PostgreSQL** as its primary relational database — chosen for it
 
 ---
  
-### Other Tools
- 
-<!-- Other tool if any -->
+### ⚡ Background Jobs & Caching
+
+Enrollment requests are processed asynchronously using **Bull** queues backed by **Redis** — so no request is lost even under heavy load. Two separate Redis instances are used: one for volatile caching and one for persistent job queuing.
+
+| Logo | Technology | Role | Why We Chose It |
+|:----:|------------|------|-----------------|
+| <img src="https://cdn.simpleicons.org/redis/FF4438" width="24"/> | **Redis** *(Cache Instance)* | Data Caching | Caches course catalog, schedule data, GPA, and sessions — reduces repetitive DB queries. Short TTLs ensure data freshness. |
+| <img src="https://cdn.simpleicons.org/redis/FF4438" width="24"/> | **Redis** *(Queue Instance)* | Job Queue Broker | Separate persistent Redis instance for the job queue. Configured with RDB snapshots and AOF so pending jobs survive crashes. |
+| <img src="https://bullmq.io/images/bullmq-logo.png" width="48"/> | **BullMQ** | Job Queue Library | Handles asynchronous tasks such as enrollment processing, grade calculations, email notifications, and TOR generation. Provides retry mechanisms, concurrency control, and dead-letter queue support for failed jobs. |
+
+---
 
 ## Hosting
 <!-- Hostings -->
