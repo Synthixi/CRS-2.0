@@ -59,7 +59,6 @@
     - [Direct Payment Process](#direct-payment-process)
     - [CRS 2.0 Simple Sitemap](#crs-20-simple-sitemap)
     - [Course Enlistment Flowchart](#course-enlistment-flowchart)
-  - [Project Contributors](#project-contributors)
 ---
 ## System Summary
 
@@ -383,11 +382,6 @@ flowchart LR
 
 </div>
 
-## Project Contributors
-
-<a href="https://github.com/Synthixi/CRS-2.0/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Synthixi/CRS-2.0" />
-</a>
 
 
 
