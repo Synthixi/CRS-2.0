@@ -24,6 +24,8 @@
     - [Team Members](#team-members)
   - [Table of Contents](#table-of-contents)
   - [System Summary](#system-summary)
+    - [Problem Statement](#problem-statement)
+    - [Solution](#solution)
     - [New Features](#new-features)
     - [Fixes](#fixes)
     - [CRS 1.0 Issues vs. CRS 2.0 Solutions](#crs-10-issues-vs-crs-20-solutions)
@@ -46,6 +48,15 @@
 ---
 ## System Summary
 
+### Problem Statement
+
+The current UPV CRSIS (established ~2010) suffers from critical infrastructure issues, poor user experience, and inability to handle peak enrollment traffic, resulting in system crashes during crucial registration periods that affect thousands of students.
+ 
+### Solution 
+
+A modern, scalable, and resilient web application redesign leveraging contemporary cloud-native technologies to ensure reliability, performance, and user satisfaction.
+ 
+
 ### New Features
 - Students can now see during course enlistment whether taking a course would cause a conflict with their current schedule
 - Direct payment of tuition and other fees through the portal (no more separate Maya QR workaround)
@@ -67,6 +78,7 @@
 | **Portal experience** | Scattered across multiple pages (grades, schedules, documents in different places) | Unified dashboard (everything in one place) |
 | **Transaction speed** | Slow processing (long wait times, even crashes during peak enrollment) | Optimized backend through async processing with caching |
 | **Text readability** | Small hard-to-read text | Larger text and improved typography |
+| **No Real-Time Updates** | Must refresh to see course availability or schedule changes | Live updates on seat counts, schedule changes, and enrollment confirmations |
 
 
 ## 🛠️ CRS 2.0 — Tech Stack
@@ -151,7 +163,10 @@ Enrollment requests are processed asynchronously using **Bull** queues backed by
 |:----:|------------|------|-----------------|
 | <img src="https://cdn.simpleicons.org/docker/2496ED" width="24"/> | **Docker** | Containerization | Packages the app and all dependencies into containers — ensures consistent environments across development and production. |
 | <img src="https://cdn.simpleicons.org/docker/2496ED" width="24"/> | **Docker Compose** | Local Dev Orchestration | Spins up PostgreSQL, Redis (cache + queue), NestJS, and Next.js locally with a single command for easy developer setup. |
-| <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="24"/> | **Kubernetes** | Production Orchestration | Manages auto-scaling, load balancing, and container health in production — handles enrollment traffic spikes automatically. |
+| <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="24"/> | **Kubernetes / K3s** | Production Orchestration | Manages auto-scaling, load balancing, and container health in production — handles enrollment traffic spikes automatically. K3s may be used as a lightweight alternative on university hardware. |
+| <img src="https://cdn.simpleicons.org/nginx/009639" width="24"/> | **Nginx** | Web Server & Reverse Proxy | Serves as the entry point for all HTTP traffic — handles SSL termination, load balancing, and routing to backend services. |
+| <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="24"/> | **GitHub Actions** | CI/CD Pipeline | Automates testing and deployment on every push — reduces manual overhead and ensures consistent, reliable releases. |
+| <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="24"/> | **CDN (e.g. Cloudflare)** | Static Asset Delivery | Caches and delivers static assets (CSS, JS, images) globally — improves load times and provides DDoS protection. |
 
 ---
 
@@ -191,7 +206,9 @@ Used for caching and delivering static assets (e.g., CSS, JavaScript, images) to
 * CI/CD Pipeline:
 Cloud-based tools (e.g., GitHub Actions or GitLab CI) will automate testing and deployment, reducing manual overhead and improving development speed
 * Monitoring and Logging:
-Lightweight cloud monitoring solutions (e.g., Grafana Cloud or similar) will provide system visibility without requiring extensive on-premise storage
+  A self-hosted observability stack (Prometheus, Grafana, ELK Stack, and Sentry) provides 
+  full system visibility — covering metrics collection, dashboards, centralized logging, 
+  and error tracking — without relying on external cloud services.
 
 **Rationale for Hybrid Approach**
 
