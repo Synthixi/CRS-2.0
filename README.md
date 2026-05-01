@@ -26,7 +26,8 @@
   - [System Summary](#system-summary)
     - [New Features](#new-features)
     - [Fixes](#fixes)
-    - [CRS 1.0 vs CRS 2.0 ](#crs-10-issues-vs-crs-20-solutions)
+    - [CRS 1.0 Issues vs. CRS 2.0 Solutions](#crs-10-issues-vs-crs-20-solutions)
+      - [Numerous issues have been identified and reported in CRS 1.0 Here is how CRS 2.0 solves each problem:](#numerous-issues-have-been-identified-and-reported-in-crs-10-here-is-how-crs-20-solves-each-problem)
   - [🛠️ CRS 2.0 — Tech Stack](#️-crs-20--tech-stack)
     - [🎨 Frontend Tools](#-frontend-tools)
     - [⚙️ Backend Tools](#️-backend-tools)
@@ -218,6 +219,7 @@ The following diagrams illustrates the workflows and structure of CRS 2.0
 
 ### Direct Payment Process
 
+<div align="center" style="max-width: 650px; margin: auto;">
 
 ```mermaid
 sequenceDiagram
@@ -237,18 +239,21 @@ sequenceDiagram
     Note over Payment,Student: If successful
     Payment-->>CRS: Payment confirmed
     CRS->>DB: Update payment status
-    CRS-->>Student:  Success + Receipt
+    CRS-->>Student: Success + Receipt
     
     Note over Payment,Student: If failed
     Payment-->>CRS: Payment failed
-    CRS-->>Student:  Error - Retry
+    CRS-->>Student: Error - Retry
 ```
 
+</div>
 
 ---
 
-
 ### CRS 2.0 Simple Sitemap
+
+<div align="center" style="max-width: 750px; margin: auto;">
+
 ```mermaid
 flowchart LR
     Home["CRS 2.0 Homepage"]
@@ -269,14 +274,13 @@ flowchart LR
     Student --> Enrollment["Enrollment"]
 
     Admin --> ADashboard["..."]
-    Faculty -->FDashboard["..."]
+    Faculty --> FDashboard["..."]
     
     Forms --> Graduates["Graduates"]
     Forms --> Undergrads["Undergrads"]
     Forms --> Downloadable["Downloadable"]
     
     Colleges --> CAS["Arts & Sciences"]
-    Colleges --> CBA["Business"]
     Colleges --> CFOS["Fisheries & Ocean Sciences"]
     Colleges --> CM["Management"]
     Colleges --> SoTech["School of Technology"]
@@ -290,11 +294,14 @@ flowchart LR
     Contacts --> Registrar["Registrar"]
 ```
 
+</div>
 
 ---
 
-
 ### Course Enlistment Flowchart
+
+<div align="center" style="max-width: 600px; margin: auto;">
+
 ```mermaid
 flowchart TD
     Start([Student logs in]) --> Dashboard[Dashboard]
@@ -302,14 +309,19 @@ flowchart TD
     Enlist --> Browse[Browse courses]
     Browse --> Select[Select course]
     Select --> Check{Check conflict}
+    
     Check -->|Conflict found| Warn[Show warning]
     Warn --> Modify[Modify schedule]
     Modify --> Check
+    
     Check -->|No conflict| Add[Add to enlistment]
     Add --> More{More courses?}
+    
     More -->|Yes| Browse
     More -->|No| Finalize[Finalize enlistment]
-    Finalize --> End([Done])
     
+    Finalize --> End([Done])
 ```
+
+</div>
 
