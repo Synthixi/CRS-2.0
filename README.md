@@ -26,6 +26,7 @@
   - [System Summary](#system-summary)
     - [New Features](#new-features)
     - [Fixes](#fixes)
+    - [CRS 1.0 vs CRS 2.0 ](#crs-10-issues-vs-crs-20-solutions)
   - [🛠️ CRS 2.0 — Tech Stack](#️-crs-20--tech-stack)
     - [🎨 Frontend Tools](#-frontend-tools)
     - [⚙️ Backend Tools](#️-backend-tools)
@@ -51,6 +52,19 @@
 - Improved UI and placements of navigation elements (— replaced the outdated newspaper layout)
 - Unified portal experience — document requests, schedules, grades, and payments in one place instead of scattered across separate pages
 - Bigger text and visual weight to improve visual hierarchy, making key information easier to scan
+
+### CRS 1.0 Issues vs. CRS 2.0 Solutions
+#### Numerous issues have been identified and reported in CRS 1.0 Here is how CRS 2.0 solves each problem:
+
+
+| Issue | CRS 1.0 | CRS 2.0 Solution |
+|:--------:|---------|------------------|
+| **Schedule conflicts** | No detection (students discover conflicts after enlisting the course) | Real-time conflict checker warns before adding courses |
+| **Tuition payment** | Separate Maya QR workaround (leave the portal, use third-party app) | Direct payment integration (pay without leaving CRS) |
+| **User interface** | Outdated newspaper layout (poor visual hierarchy) | Modern responsive UI (clear visual weight and navigation) |
+| **Portal experience** | Scattered across multiple pages (grades, schedules, documents in different places) | Unified dashboard (everything in one place) |
+| **Transaction speed** | Slow processing (long wait times, even crashes during peak enrollment) | Optimized backend through async processing with caching |
+| **Text readability** | Small hard-to-read text | Larger text and improved typography |
 
 
 ## 🛠️ CRS 2.0 — Tech Stack
