@@ -252,7 +252,7 @@ sequenceDiagram
 
 ### CRS 2.0 Simple Sitemap
 
-<div align="center" style="max-width: 750px; margin: auto;">
+<div align="center" style="max-width: 500px; margin: auto;">
 
 ```mermaid
 flowchart LR
@@ -300,10 +300,10 @@ flowchart LR
 
 ### Course Enlistment Flowchart
 
-<div align="center" style="max-width: 600px; margin: auto;">
+<div align="center" style="max-width: 900px; margin: auto;">
 
 ```mermaid
-flowchart TD
+flowchart LR
     Start([Student logs in]) --> Dashboard[Dashboard]
     Dashboard --> Enlist[Click Enlistment]
     Enlist --> Browse[Browse courses]
