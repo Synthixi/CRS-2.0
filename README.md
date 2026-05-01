@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="image.png" width="200"/>
+  <img src="project-logo.png" width="200"/>
 
   <hr>
 
@@ -15,11 +15,22 @@
   
 </div>
 
+<table>
+<tr>
+<td>
+
 ### Team Members
 - Justin Lauricio — Product Owner  
 - Samantha Mok — Frontend Designer  
 - Jhon Chriztopher Nice — Backend Developer  
 - Aleighia Keith Reyes — Database Manager  
+
+</td>
+<td align="right" style="padding-left: 40px; padding-top: 25px;">
+  <img src="company-logo.png" width="125"/>
+</td>
+</tr>
+</table>
 
 ---
 
