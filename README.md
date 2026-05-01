@@ -19,7 +19,7 @@
 <tr>
 <td>
 
-### Team Members
+### 👥 Team Members
 - Justin Lauricio — Product Owner  
 - Samantha Mok — Frontend Designer  
 - Jhon Chriztopher Nice — Backend Developer  
@@ -34,12 +34,12 @@
 
 ---
 
-## Table of Contents
+## 📖 Table of Contents
  
 - [UPV CRS 2.0](#upv-crs-20)
-    - [Team Members](#team-members)
-  - [Table of Contents](#table-of-contents)
-  - [System Summary](#system-summary)
+    - [👥 Team Members](#-team-members)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [⚙️ System Summary](#️-system-summary)
     - [Problem Statement](#problem-statement)
     - [Solution](#solution)
     - [New Features](#new-features)
@@ -53,14 +53,14 @@
     - [🧪 Testing](#-testing)
     - [📊 Monitoring \& Logging](#-monitoring--logging)
     - [🚀 Deployment \& Infrastructure](#-deployment--infrastructure)
-  - [Hosting](#hosting)
-  - [Mockups](#mockups)
-  - [System Architecture](#system-architecture)
+  - [🌐 Hosting](#-hosting)
+  - [💻 Mockups](#-mockups)
+  - [🏗️ System Architecture](#️-system-architecture)
     - [Direct Payment Process](#direct-payment-process)
     - [CRS 2.0 Simple Sitemap](#crs-20-simple-sitemap)
     - [Course Enlistment Flowchart](#course-enlistment-flowchart)
 ---
-## System Summary
+## ⚙️ System Summary
 
 ### Problem Statement
 
@@ -184,9 +184,7 @@ Enrollment requests are processed asynchronously using **Bull** queues backed by
 
 ---
 
-
-
-## Hosting
+## 🌐 Hosting
 **Overview**
 
 **CRS 2.0** will adopt a hybrid hosting strategy, combining primarily on-premise infrastructure with selective cloud-based services. This approach balances cost efficiency, data security, and modern development practices while leveraging the university’s existing hardware resources.
@@ -249,7 +247,7 @@ flowchart LR
 
 This phased approach ensures minimal disruption and allows rollback if necessary.
 
-## Mockups
+## 💻 Mockups
 
 The following mockups provide a visual overview of the redesigned CRS 2.0 experience, specifically the Home, Student-Log-in, Student Portal, and Schedule pages:<br>
 
@@ -270,7 +268,7 @@ The following mockups provide a visual overview of the redesigned CRS 2.0 experi
   
 ---
 
-## System Architecture 
+## 🏗️ System Architecture 
 
 The following diagrams illustrates the workflows and structure of CRS 2.0
 
