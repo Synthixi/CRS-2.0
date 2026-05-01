@@ -251,7 +251,25 @@ flowchart LR
 This phased approach ensures minimal disruption and allows rollback if necessary.
 
 ## Mockups
-<!-- Screenshots -->
+
+The following mockups provide a visual overview of the redesigned CRS 2.0 experience, specifically the Home, Student-Log-in, Student Portal, and Schedule pages:<br>
+
+<p align="center"><b>Home Page</b></p>
+  <img src="home-page.png" width="100%" alt="Home Page Mockup">
+<br><br>
+
+<p align="center"><b>Student Log-in Page</b></p>
+  <img src="student-log-in-page.png" width="100%" alt="Student Log-in Mockup">
+<br><br>
+
+<p align="center"><b>Student Portal Page</b></p>
+  <img src="student-page.png" width="100%" alt="Student Page Mockup">
+<br><br>
+
+<p align="center"><b>Schedule Page</b></p>
+  <img src="schedule-page.png" width="100%" alt="Schedule Page Mockup">
+  
+---
 
 ## System Architecture 
 
