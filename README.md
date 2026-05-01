@@ -1,7 +1,14 @@
-# The Long Awaited CRS 2.0 is Here!
+<div align="center">
 
-## Overview
-CRS 2.0 is a redesigned version of the University of the Philippines Visayas Course Registration System (CRS). The update aims to improve usability, performance, and reliability by introducing a more modern web-based platform that supports faster transactions and improved user experience.
+  <img src="image.png" width="200"/>
+
+  <hr>
+
+  # UPV CRS 2.0
+
+  UPV CRS 2.0 is a redesigned version of the University of the Philippines Visayas Course Registration System (CRS). The update aims to improve usability, performance, and reliability by introducing a more modern web-based platform that supports faster transactions and improved user experience.
+  
+</div>
 
 ### Team Members
 - Justin Lauricio — Product Owner  
@@ -13,8 +20,7 @@ CRS 2.0 is a redesigned version of the University of the Philippines Visayas Cou
 
 ## Table of Contents
  
-- [The Long Awaited CRS 2.0 is Here!](#the-long-awaited-crs-20-is-here)
-  - [Overview](#overview)
+- [UPV CRS 2.0](#upv-crs-20)
     - [Team Members](#team-members)
   - [Table of Contents](#table-of-contents)
   - [System Summary](#system-summary)
