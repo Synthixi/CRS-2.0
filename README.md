@@ -142,13 +142,13 @@ Enrollment requests are processed asynchronously using **Bull** queues backed by
 
 
 ## Hosting
-Overview
+**Overview**
 
 CRS 2.0 will adopt a hybrid hosting strategy, combining primarily on-premise infrastructure with selective cloud-based services. This approach balances cost efficiency, data security, and modern development practices while leveraging the university’s existing hardware resources.
 
-Primary Hosting: On-Premise Infrastructure
+**Primary Hosting: On-Premise Infrastructure**
 
-The core CRS 2.0 system—including the backend API, application services, and database—will be deployed on university-managed servers. To modernize deployment and improve scalability, the system will use:
+The core CRS 2.0 system—including the backend API, application services, and database will be deployed on university-managed servers. To modernize deployment and improve scalability, the system will use:
 
 * Docker for containerization
 * Kubernetes (K8s) or a lightweight distribution such as K3s for orchestration
@@ -157,18 +157,18 @@ The core CRS 2.0 system—including the backend API, application services, and d
 
 This setup allows the system to run efficiently on existing infrastructure while enabling modular, scalable, and maintainable deployments.
 
-Key Advantages:
+**Key Advantages:**
 
 * Cost efficiency: Utilizes existing hardware, minimizing new capital expenditure
 * Data sovereignty: Sensitive student data remains within university premises
 * Operational continuity: Aligns with current IT team expertise
 * Scalability: Additional nodes can be added as needed
 
-Secondary Hosting: Selective Cloud Services
+**Secondary Hosting: Selective Cloud Services**
 
 Cloud services will be used only where they provide clear operational benefits, without storing sensitive data externally.
 
-Included Services:
+**Included Services:**
 
 * Content Delivery Network (CDN):
 Used for caching and delivering static assets (e.g., CSS, JavaScript, images) to improve load times and provide DDoS protection
@@ -177,7 +177,7 @@ Cloud-based tools (e.g., GitHub Actions or GitLab CI) will automate testing and 
 * Monitoring and Logging:
 Lightweight cloud monitoring solutions (e.g., Grafana Cloud or similar) will provide system visibility without requiring extensive on-premise storage
 
-Rationale for Hybrid Approach
+**Rationale for Hybrid Approach**
 
 The hybrid model is selected to achieve the following:
 * Lower long-term costs compared to full cloud deployment
@@ -186,7 +186,7 @@ The hybrid model is selected to achieve the following:
 * Reduced vendor lock-in, maintaining flexibility for future migration
 * Enhanced performance via CDN and optimized infrastructure
 
-Deployment Strategy
+**Deployment Strategy**
 
 Implementation will follow a phased rollout:
 * Phase 1: Containerize services and deploy alongside the existing system
